@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catalogue complet des produits Berro Service - Découvrez tous nos articles">
+    <title>Catalogue Produits - Berro Service</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Open Sans', 'sans-serif'],
+                        'heading': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDI4QzIyLjYyNzQgMjggMjggMjIuNjI3NCAyOCAxNkMyOCA5LjM3MjU4IDIyLjYyNzQgNCAxNiA0QzkuMzcyNTggNCA0IDkuMzcyNTggNCAxNkM0IDIyLjYyNzQgOS4zNzI1OCAyOCAxNiAyOFoiIGZpbGw9IiM0RjQ2RTUiLz4KPHBhdGggZD0iTTEyIDEzSDE0VjE5SDEyVjEzWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE4IDEzSDIwVjE5SDE4VjEzWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE0IDE2SDE4VjE4SDE0VjE2WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==" alt="Logo Berro Service" class="w-8 h-8">
+                    <h1 class="text-2xl font-heading font-bold text-primary">Berro<span class="text-secondary">Service</span></h1>
+                </div>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <nav class="flex space-x-6">
+                        <a href="index.html" class="font-medium hover:text-primary transition">Accueil</a>
+                        <a href="#all-products" class="font-medium hover:text-primary transition">Tous les produits</a>
+                        <a href="#categories" class="font-medium hover:text-primary transition">Catégories</a>
+                        <a href="index.html#contact" class="font-medium hover:text-primary transition">Contact</a>
+                    </nav>
+                    <div class="flex items-center space-x-4">
+                        <a href="https://wa.me/2250140833840" class="bg-primary text-white px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-opacity-90 transition">
+                            <i data-feather="phone" class="w-4 h-4"></i>
+                            <span>+225 0140833840</span>
+                        </a>
+                    </div>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="index.html" class="py-2 font-medium">Accueil</a>
+                <a href="#all-products" class="py-2 font-medium">Tous les produits</a>
+                <a href="#categories" class="py-2 font-medium">Catégories</a>
+                <a href="index.html#contact" class="py-2 font-medium">Contact</a>
+                <div class="pt-2 border-t">
+                    <a href="https://wa.me/2250140833840" class="bg-primary text-white px-4 py-2 rounded-full inline-flex items-center space-x-2">
+                        <i data-feather="phone" class="w-4 h-4"></i>
+                        <span>+225 0140833840</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Catalogue Header -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-heading font-bold mb-4">Catalogue Complet</h1>
+            <p class="text-lg opacity-90 max-w-2xl mx-auto">Découvrez tous nos produits de qualité à des prix compétitifs. Livraison rapide et service client exceptionnel.</p>
+        </div>
+    </section>
+
+  
+  <!-- All Products Grid -->
+<section id="all-products" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Produit 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition product-card" data-category="mode">
+                <div class="relative">
+                    <img src="images/produit-E-1.jpg" alt="T-shirt graphique vert clair surdimensionné" class="w-full h-75 object-cover">
+                    <span class="absolute top-2 left-2 bg-secondary text-white text-xs px-2 py-1 rounded">Nouveau</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-heading font-bold mb-1">T-shirt graphique vert clair surdimensionné</h3>
+                    <p class="text-sm text-gray-500 mb-3">Catégorie: Mode</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-primary">6 000 FCFA</span>
+                        <a href="https://wa.me/2250140833840?text=Bonjour! Je suis intéressé(e) par le T-shirt graphique vert clair surdimensionné à 6 000 FCFA" class="bg-primary text-white p-2 rounded-full hover:bg-opacity-90 transition">
+                            <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition product-card" data-category="mode">
+                <div class="relative">
+                    <img src="images/produit-E-2.jpg" alt="T-shirt graphique Saint Tears" class="w-full h-75 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-heading font-bold mb-1">T-shirt graphique Saint Tears</h3>
+                    <p class="text-sm text-gray-500 mb-3">Catégorie: Mode</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-primary">6 000 FCFA</span>
+                        <a href="https://wa.me/2250140833840?text=Bonjour! Je suis intéressé(e) par le T-shirt graphique Saint Tears à 6 000 FCFA" class="bg-primary text-white p-2 rounded-full hover:bg-opacity-90 transition">
+                            <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition product-card" data-category="mode">
+                <div class="relative">
+                    <img src="images/produit-E-3.jpg" alt="T-shirt rose surdimensionné Dragon Ball Z" class="w-full h-75 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-heading font-bold mb-1">T-shirt rose surdimensionné Dragon Ball Z</h3>
+                    <p class="text-sm text-gray-500 mb-3">Catégorie: Mode</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-primary">6 000 FCFA</span>
+                        <a href="https://wa.me/2250140833840?text=Bonjour! Je suis intéressé(e) par le T-shirt rose surdimensionné Dragon Ball Z à 6 000 FCFA" class="bg-primary text-white p-2 rounded-full hover:bg-opacity-90 transition">
+                            <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 4 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition product-card" data-category="mode">
+                <div class="relative">
+                    <img src="images/produit-E-4.jpg" alt="T-shirt black Nike" class="w-full h-75 object-cover">
+                    <span class="absolute top-2 left-2 bg-primary text-white text-xs px-2 py-1 rounded">Populaire</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-heading font-bold mb-1">T-shirt black Nike</h3>
+                    <p class="text-sm text-gray-500 mb-3">Catégorie: Mode</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-primary">6 000 FCFA</span>
+                        <a href="https://wa.me/2250140833840?text=Bonjour! Je suis intéressé(e) par le T-shirt black Nike à 6 000 FCFA" class="bg-primary text-white p-2 rounded-full hover:bg-opacity-90 transition">
+                            <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 5 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition product-card" data-category="mode">
+                <div class="relative">
+                    <img src="images/produit-E-5.jpg" alt="T-shirt Casablanca couleur rose" class="w-full h-75 object-cover">
+                    <span class="absolute top-2 left-2 bg-secondary text-white text-xs px-2 py-1 rounded">Nouveau</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-heading font-bold mb-1">T-shirt Casablanca couleur rose</h3>
+                    <p class="text-sm text-gray-500 mb-3">Catégorie: Mode</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-primary">6 000 FCFA</span>
+                        <a href="https://wa.me/2250140833840?text=Bonjour! Je suis intéressé(e) par le T-shirt Casablanca couleur rose à 6 000 FCFA" class="bg-primary text-white p-2 rounded-full hover:bg-opacity-90 transition">
+                            <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 6 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition product-card" data-category="mode">
+                <div class="relative">
+                    <img src="images/produit-E-6.jpg" alt="T-shirt rouge et crème" class="w-full h-75 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-heading font-bold mb-1">T-shirt rouge et crème</h3>
+                    <p class="text-sm text-gray-500 mb-3">Catégorie: Mode</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-primary">6 000 FCFA</span>
+                        <a href="https://wa.me/2250140833840?text=Bonjour! Je suis intéressé(e) par le T-shirt rouge et crème à 6 000 FCFA" class="bg-primary text-white p-2 rounded-full hover:bg-opacity-90 transition">
+                            <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 7 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition product-card" data-category="mode">
+                <div class="relative">
+                    <img src="images/produit-E-7.jpg" alt="VLONE x City Morgue Dogs Tee" class="w-full h-75 object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-heading font-bold mb-1">VLONE x City Morgue Dogs Tee</h3>
+                    <p class="text-sm text-gray-500 mb-3">Catégorie: Mode</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-primary">6 000 FCFA</span>
+                        <a href="https://wa.me/2250140833840?text=Bonjour! Je suis intéressé(e) par le VLONE x City Morgue Dogs Tee à 6 000 FCFA" class="bg-primary text-white p-2 rounded-full hover:bg-opacity-90 transition">
+                            <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 8 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition product-card" data-category="mode">
+                <div class="relative">
+                    <img src="images/produit-E-8.jpg" alt="URB_N Men Oversized T-shirt" class="w-full h-75 object-cover">
+                    <span class="absolute top-2 left-2 bg-primary text-white text-xs px-2 py-1 rounded">Populaire</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-heading font-bold mb-1">URB_N Men Oversized T-shirt</h3>
+                    <p class="text-sm text-gray-500 mb-3">Catégorie: Mode</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-primary">6 000 FCFA</span>
+                        <a href="https://wa.me/2250140833840?text=Bonjour! Je suis intéressé(e) par l'URB_N Men Oversized T-shirt à 6 000 FCFA" class="bg-primary text-white p-2 rounded-full hover:bg-opacity-90 transition">
+                            <i data-feather="shopping-cart" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-12">
+            <div class="flex space-x-2">
+                <a href="produit.html" class="bg-gray-200 text-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-300">1</a>
+                <a href="produit-2.html" class="bg-gray-200 text-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-300">2</a>
+                <a href="produit-3.html" class="bg-gray-200 text-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-300">3</a>
+                <a href="produit-4.html" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center">4</a>
+                
+            </div>
+        </div>
+
+        <div class="text-center mt-10">
+            <a href="https://wa.me/2250140833840?text=Bonjour! Je peux voir tous les produits ?" class="inline-block border border-primary text-primary px-6 py-3 rounded-full font-medium hover:bg-primary hover:text-white transition">Voir tous les produits</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-heading font-bold mb-4">Vous ne trouvez pas ce que vous cherchez ?</h2>
+            <p class="text-lg mb-6 opacity-90">Contactez-nous directement pour des demandes spéciales ou des produits personnalisés.</p>
+            <a href="https://wa.me/2250140833840" class="bg-white text-primary px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition inline-flex items-center space-x-2">
+                <i data-feather="message-circle" class="w-5 h-5"></i>
+                <span>Nous contacter sur WhatsApp</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDI4QzIyLjYyNzQgMjggMjggMjIuNjI3NCAyOCAxNkMyOCA5LjM3MjU4IDIyLjYyNzQgNCAxNiA0QzkuMzcyNTggNCA0IDkuMzcyNTggNCAxNkM0IDIyLjYyNzQgOS4zNzI1OCAyOCAxNiAyOFoiIGZpbGw9IiMxMEI5ODEiLz4KPHBhdGggZD0iTTEyIDEzSDE0VjE5SDEyVjEzWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE4IDEzSDIwVjE9SDE4VjEzWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE0IDE2SDE4VjE4SDE0VjE2WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==" alt="Logo Berro Service" class="w-6 h-6">
+                    <h2 class="text-xl font-heading font-bold">Berro<span class="text-secondary">Service</span></h2>
+                </div>
+                 <div class="text-center md:text-right">
+                    <p class="text-gray-400">© 2025 Hackhenaton tech. Tous droits réservés.</p>
+                    <a href="https://hackhenaton-tech.github.io/Mon-portfolio/" class="text-white me-3">Hackhenaton Tech</a>
+                    <p class="text-gray-400">Votre partenaire de confiance pour des produits de qualité.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2250140833840" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50">
+        <i data-feather="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Category Filter
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.textContent.trim().toLowerCase();
+                
+                // Update active button
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                this.classList.remove('bg-gray-200', 'text-gray-700');
+                this.classList.add('bg-primary', 'text-white');
+                
+                // Filter products
+                document.querySelectorAll('.product-card').forEach(card => {
+                    if (category === 'tous') {
+                        card.style.display = 'block';
+                    } else {
+                        if (card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
